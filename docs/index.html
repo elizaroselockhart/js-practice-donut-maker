@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto+Slab:wght@300&family=Sofia&display=swap" rel="stylesheet"> 
+    <title>Donut Clicker!</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <section id="about">
+                <p>About Fred the Donut Man</p>
+                <p id="expand">Fred the Donut Man is a fictional character. He is not real. A fiction. He can't hurt you anymore. It's okay.</p>
+            </section>
+            <section id="about">
+                <p>About Cookie Clicker</p>
+                <p id="expand">This game was inspired by Cookie Clicker!</p>
+            </section>
+            <section id="about">
+                <p>Contact Me</p>
+                <p id="expand">My name is Eliza Lockhart, I'm a full-stack Javascript and C# software developer.
+                    You can contact my by visiting my <a href="https://elizaroselockhart.github.io/">portfolio.</a>
+                </p>
+            </section>
+        </div>
+    </header>
+    <div id="donut-count-area">
+        <div id="donut-count" class="counts">
+            <h1 id=donut-header>Donuts:</h2>
+            <p id="donut-display">0</p>
+        </div>
+        <div id="click-count" class="counts">
+            <h1>Clicks:</h1>
+            <p id="click-display">0</p>
+        </div>
+    </div>
+    <div id="donut-clicker">
+        <button type="button" id="donut-button" onclick="myDonutMaker.ClickBtn()">Click Me!</button>
+    </div>
+
+    <div id="purchase-area">
+        <section id=autoclicker-area class="purchases">
+            <h2 id="autoclickers-purchased">You have 0 autoclickers!</h2>
+            <p>Autoclickers will click for you once per second.</p>
+            <button disabled type="button" id="autoclicker-purchase-button" class="purchasebtn" onclick="myDonutMaker.purchaseAutoClicker()">BUY: 100 DONUTS</button>
+        </section>
+        <section id=donut-multiplier-area class="purchases">
+            <h2 id="multipliers-purchased">You have 0 donut multipliers!
+                <p>Your multiplier is 1.00.</p>
+            </h2>
+            <p>Multipliers affect both your clicks and your autoclickers!</p>
+            <button disabled type="button" id="donut-multiplier-purchase-button" class="purchasebtn" onclick="myDonutMaker.purchaseMultiplier()">BUY: 10 CLICKS</button>
+        </section>
+    </div>
+
+    <div id="reset-button-area">
+        <button type="button" id="reset-button">RESET GAME</button>
+    </div>
+    <canvas id="canvas" width="100" height="100"></canvas>
+    <script src="../src/js/donutshop.js"></script>
+    <script src="../src/js/particles.js"></script>
+    <script src="../src/js/app.js"></script>
+</body>
+</html>
